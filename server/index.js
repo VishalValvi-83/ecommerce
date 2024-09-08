@@ -2,8 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import bcrypt from "bcrypt"
-import User from "./models/User.js"; 
+// import bcrypt from "bcrypt"
+import { postLogin, postSignup } from "./models/User.js"; 
 
 dotenv.config();
 
@@ -38,39 +38,10 @@ app.get("/health", (req, res) => {
 });
 
 // Login route
-app.post('/login', async (req, res) => {
-    console.log("Login request received");
-    console.log("Request body:", req.body);
-    
-    const { email, password } = req.body;
-
-    try {
-        // Check if the user exists
-        const user = await User.findOne({ email: new RegExp('^' + email + '$', 'i') });
-
-        if (!user) {
-            console.log("User not found");
-            return res.status(400).json({ message: 'User not found' });
-        }
-
-        // Compare the provided password with the stored hashed password
-        const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) {
-            console.log("Invalid credentials");
-            return res.status(400).json({ message: 'Invalid credentials' });
-        }
-
-        // Generate a JWT token
-        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-        console.log("Token generated:", token);
-
-        // Respond with the token
-        res.json({ token });
-    } catch (error) {
-        console.error("Error during login:", error);  // Log the full error
-        res.status(500).json({ message: 'Server error', error: error.message });
-    }
-});
+// Login route
+app.post('/login', postLogin)
+// register route
+app.post('/signup', postSignup)
 
 
 // Start the server
