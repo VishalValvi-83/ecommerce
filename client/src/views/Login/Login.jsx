@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
@@ -21,7 +21,7 @@ function Login() {
   const loginNow = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, {
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, {
         email,
         password,
       });
@@ -68,7 +68,7 @@ function Login() {
               placeholder="Enter your password"
             />
             <button onClick={loginNow} className="login-button">Login</button>
-            <Link to='/signup' className="signup-link">Don't have an account? SIGN UP</Link>
+            <Link to='/signup' className="signup-link"> Dont have an account? SIGN UP</Link>
           </div>
         </div>
       </div>
