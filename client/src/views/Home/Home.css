@@ -1,0 +1,205 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .home-container {
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 1600px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .hero-section .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    border-radius: 10px;
+  }
+  
+  .hero-section h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  /*Product section */
+  .product-card{
+    height:400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s;
+    font-weight: 500;
+  }
+  .card-img{
+    margin-bottom: 10px;
+  }
+  /* Features Section */
+  .features-section {
+    display: flex;
+    margin-top:0;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #f9f9f9;
+    margin-bottom: 50px;
+  }
+  
+  .feature-card {
+    height:480px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feature-card img {
+    height:220px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333333;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666666;
+  }
+  
+  /* Newsletter Section */
+  .newsletter-section {
+    width:60%;
+    margin:auto;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .newsletter-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .newsletter-form input {
+    padding: 15px;
+    width: 300px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+  }
+  
+  .newsletter-form button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #ff7f50;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #ff6347;
+  }
+  
+  /* Buttons */
+  .primary-button {
+    padding: 11px 25px;
+    background-color: #ff7f50;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .primary-button:hover {
+    background-color: #ff6347;
+    color:black;
+    padding: 13px 30px;
+  }
+  
+  .secondary-button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #ff7f50;
+    text-decoration: none;
+    border: 2px solid #ff7f50;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .secondary-button:hover {
+    background-color: #ff7f50;
+    color: #ffffff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .features-section {
+      flex-direction: column;
+      padding: 50px 20px;
+    }
+  
+    .feature-card {
+      margin-bottom: 30px;
+    }
+  
+    .hero-section h1 {
+      font-size: 3rem;
+    }
+  
+    .hero-section p {
+      font-size: 1rem;
+    }
+  }
+  

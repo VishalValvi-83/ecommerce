@@ -1,0 +1,42 @@
+/* Container for the card */
+.card {
+    width: 200px; /* Width of the card */
+    padding: 1rem; /* Padding around content */
+    border-radius: 0.5rem; /* Rounded corners */
+    overflow: hidden; /* Prevents content from overflowing */
+    background-color: #f9f9f9; /* Initial background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.5s ease; /* Smooth transition for background color on hover */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Image styling */
+  .card-image {
+    width: 50%; /* Image takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures image covers the container */
+    margin-bottom: 1rem; /* Space between image and title */
+  }
+  
+  /* Title styling */
+  .card-title {
+    font-size: 1.25rem; /* Larger font size */
+    font-weight: 600; /* Semi-bold text */
+    color: #333; /* Dark text color */
+  }
+  
+  /* Hover effect */
+  .card:hover {
+    background: linear-gradient(to top, #f39c12, #e74c3c); /* Gradient from bottom to top */
+    color: white; /* Changes text color to white on hover */
+  }
+  
+  .card:hover .card-title {
+    color: white; /* Ensures the title text stays white on hover */
+  }
+  

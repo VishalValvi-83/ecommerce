@@ -1,0 +1,135 @@
+body {
+    background-color: #6d6b6b;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-image: url(./login.jpg);
+    background-repeat: no-repeat;
+    background-color: #f5f7fa;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200vh;
+    backdrop-filter: blur;
+  }
+  
+  .login-container {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    backdrop-filter: blur(5px);
+    margin-top:50px;
+  }
+  
+  .welcome-text {
+    font-size: 48px;
+    color: #3a4750;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+    font-weight: 700;
+  }
+  
+  .login-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .login-image {
+    width: 50%;
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  .login-form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .form-title {
+    font-size: 32px;
+    color: #565656;
+    font-weight:500;
+    margin-left:50px;
+    margin-bottom: 30px;
+  }
+  
+  .form-label {
+    color: #000000;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-input:focus {
+    border-color: #ffffff;
+    outline: none;
+  }
+  
+  .login-button {
+    background-color: #3a4750;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #52616b;
+  }
+  
+  .signup-link {
+    display: block;
+    text-decoration: none;
+    color: #030303;
+    margin-top: 20px;
+    margin-left:50px;
+    text-align: center;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
