@@ -2,8 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+import { postLogin, postSignup } from "./controllers/user.js";
 // import bcrypt from "bcrypt"
-import { postLogin, postSignup } from "./models/User.js"; 
 
 dotenv.config();
 
