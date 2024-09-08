@@ -28,6 +28,9 @@ const connectDB = async () => {
 };
 connectDB();
 
+app.get('/', (req, res) =>{
+    res.send('Hello from the server!')
+})
 // Health check route
 app.get("/health", (req, res) => {
     res.json({
@@ -37,7 +40,6 @@ app.get("/health", (req, res) => {
     });
 });
 
-// Login route
 // Login route
 app.post('/login', postLogin)
 // register route
